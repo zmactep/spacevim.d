@@ -1,0 +1,68 @@
+[options]
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    enable_guicolors = true
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false 
+    enable_vimfiler_welcome = false
+    enable_vimfiler_gitstatus = true
+    bootstrap_before = "myspace#before"
+    statusline_right_sections = [
+       'cursorpos',
+       'battery status',
+       'time'
+    ]
+
+[[layers]]
+    name = 'autocomplete'
+    auto-completion-return-key-behavior = "complete"
+    auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+    name = 'shell'
+    default_position = 'bottom'
+    default_height = 30
+
+[[layers]]
+    name = "sudo"
+
+[[layers]]
+    name = 'unite'
+
+[[layers]]
+    name = "VersionControl"
+
+[[layers]]
+    name = "git"
+
+[[layers]]
+    name = "github"
+
+[[layers]]
+    name = 'lsp'
+    filetypes = [
+      "rust",
+      "haskell",
+      "python"
+    ]
+    [layers.override_cmd]
+        rust = ["rustup", "run", "stable", "rls"]
+        haskell = ["hie-wrapper", "--lsp"]
+    
+[[layers]]
+    name = "lang#haskell"
+
+[[layers]]
+    name = "lang#rust"
+
+[[layers]]
+    name = "lang#python"
+
+[[layers]]
+    name = "lang#markdown"
+
+[[custom_plugins]]
+    name = "lyokha/vim-xkbswitch"
